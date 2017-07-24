@@ -182,6 +182,8 @@ public class MKL {
      */
     public native static void waitPolicy(int mode);
     // }} mkl environments set up
+    
+    public native static void mklFreeBuffers();
 
     public native static void vsAdd(int n, float[] a, int aOffset, float[] b, int bOffset,
                                     float[] y, int yOffset);

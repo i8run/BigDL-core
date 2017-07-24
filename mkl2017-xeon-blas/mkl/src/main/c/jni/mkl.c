@@ -56,6 +56,18 @@ JNIEXPORT jint JNICALL Java_com_intel_analytics_bigdl_mkl_MKL_getNumThreads
   (JNIEnv * env, jclass cls) {
     return omp_get_num_threads();
 }
+
+/*
+ * Class:     com_intel_analytics_bigdl_mkl_MKL
+ * Method:    mklFreeBuffers
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_intel_analytics_bigdl_mkl_MKL_mklFreeBuffers
+  (JNIEnv *env, jclass cls)
+{
+  mkl_free_buffers();
+}
+
 /*
   * Class:     com_intel_analytics_bigdl_mkl_MKL
   * Method:    vsAdd
